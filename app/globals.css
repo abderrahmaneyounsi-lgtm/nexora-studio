@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-text-secondary font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-brand bg-clip-text text-transparent;
+  }
+
+  .grid-pattern {
+    background-image: linear-gradient(
+        rgba(124, 58, 237, 0.03) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(124, 58, 237, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .glow-violet {
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.3);
+  }
+
+  .glow-violet-hover:hover {
+    box-shadow: 0 0 40px rgba(124, 58, 237, 0.5);
+  }
+}
