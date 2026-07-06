@@ -30,7 +30,7 @@ const projects = [
       "Site vitrine 5 pages pour un cabinet d'avocats — sobre, professionnel et optimisé SEO.",
     tech: ["Next.js", "Tailwind", "SEO"],
     gradient: "from-blue-600 via-indigo-700 to-slate-800",
-    link: "https://cabinet-juridique-martin.vercel.app",
+    link: "https://nexora-studio-qoyv.vercel.app/",
   },
 ];
 export default function Portfolio() {
