@@ -12,6 +12,7 @@ const projects = [
       "Landing page pour un café parisien — réservations en ligne, menu digital et ambiance chaleureuse.",
     tech: ["React", "Tailwind", "Vercel"],
     gradient: "from-amber-500 via-orange-500 to-yellow-600",
+    link: "https://cafe-lumiere.vercel.app",
   },
   {
     tag: "Boutique en ligne",
@@ -20,6 +21,7 @@ const projects = [
       "Landing page e-commerce pour une boutique de mode parisienne — collection, promotions et newsletter.",
     tech: ["Next.js", "Tailwind", "Stripe"],
     gradient: "from-rose-400 via-pink-500 to-amber-400",
+    link: "https://eclat-paris.vercel.app",
   },
   {
     tag: "Site Vitrine",
@@ -28,9 +30,9 @@ const projects = [
       "Site vitrine 5 pages pour un cabinet d'avocats — sobre, professionnel et optimisé SEO.",
     tech: ["Next.js", "Tailwind", "SEO"],
     gradient: "from-blue-600 via-indigo-700 to-slate-800",
+    link: "https://cabinet-juridique-martin.vercel.app",
   },
 ];
-
 export default function Portfolio() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
@@ -85,14 +87,16 @@ export default function Portfolio() {
                   ))}
                 </div>
                 <a
-                  href="#"
-                  className="inline-flex items-center font-body text-sm font-semibold text-primary hover:text-secondary transition-colors duration-200 group/link"
-                >
-                  Voir le projet
-                  <span className="ml-1 transition-transform duration-200 group-hover/link:translate-x-1">
-                    →
-                  </span>
-                </a>
+                  href={project.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center font-body text-sm font-semibold text-primary hover:text-secondary transition-colors duration-200 group/link"
+>
+  Voir le projet
+  <span className="ml-1 transition-transform duration-200 group-hover/link:translate-x-1">
+    →
+  </span>
+</a>
               </div>
             </motion.article>
           ))}
